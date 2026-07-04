@@ -69,7 +69,7 @@ public:
         return NULL;
 
     }
-    //حاسس اني عايز اضرب السعيد
+
     void InsertAfter(Node* current, T value) {
 
 
