@@ -24,7 +24,6 @@ public:
 
     }
     //هستخدمه ف الاخر
-    // يبقي حد يقول مش فاهمه
     ~clsDynamicArray()
     {
         delete[]  OriginalArray;
@@ -87,7 +86,7 @@ public:
             _TempArray[i] = OriginalArray[i];
         }
 
-        _Size = NewSize;//if say (Size = NewSize); Fucken Error لانها ميتين لوكال فاريابول بلاش غباء
+        _Size = NewSize;//if say (Size = NewSize);  Error لوكال فاريابول بلاش غباء
         delete[] OriginalArray;
 
         OriginalArray = _TempArray;
@@ -149,15 +148,6 @@ public:
         delete[] OriginalArray;
         OriginalArray = _TempArray;
         return true;
-
-        //اوعي تكون بتفكر انك تحذف ال اراي اللي فيها الاندكس بس يعني مثلا
-        //delete OriginalArray[index]
-        // احمس انت كدا مش بني ادم انا فكرت فكدا بعديها جلدت نفسي ميت جلده 
-        //لانك لو عملت كدا يبقي بتحذف البوينتر كله بالعناصر كلها 
-        //لان دا بوينتر مش سايبه هي احنا هنا الموضوع حساس يابيه مش سايبه هي
-        //لو انت مفكرتش اصلا وقاعد بتحفظ وانت مش فاهم حاجه زي عبراضي المجتهد يبقي انت كدا ميا ميا 
-        //لو انت محنك زي الدالي  يبقي طرد
-        //منور يا غالي اوعي تكون فكرت زيهم 
     }
 
     bool DeleteFirstItemAt()
@@ -236,7 +226,6 @@ public:
         delete[] OriginalArray;
         OriginalArray = _TempArray;
         return true;
-        //اوعي تكون فكرت ف اللي بفكر فيه
     }
 
     void InsertAtBeginnging(T Value) {
@@ -258,126 +247,8 @@ public:
 
         return Index >= _Size ? InsertAt(_Size - 1, Value) : InsertAt(Index + 1, Value);
     }
-
-    //حل البقر الجاموس والحلاليف ولاد ال  ..
-    // 
-//    bool InsertAtBeginning( T Value)
-//    {
-//
-//        
-//        _Size++;
-//
-//        _TempArray = new T[_Size];
-//
-//
-//        
-//
-//        _TempArray[0] = Value;
-//
-//        //copy all after index
-//        for (int i = 0; i < _Size; i++)
-//        {
-//            _TempArray[i + 1] = OriginalArray[i];
-//        }
-//
-//        delete[] OriginalArray;
-//        OriginalArray = _TempArray;
-//        return true;
-//
-//    }
-//    
-//    bool InsertBefore(T Index, T Value)
-//    {
-//
-//        if (Index >= _Size || Index < 0)
-//        {
-//            return false;
-//        }
-//
-//        _Size++;
-//
-//        _TempArray = new T[_Size];
-//
-//
-//        //copy all before index
-//        for (int i = 0; i < Index; i++)
-//        {
-//            _TempArray[i] = OriginalArray[i];
-//        }
-//
-//        _TempArray[Index] = Value;
-//
-//        //copy all after index
-//        for (int i = Index ; i < _Size; i++)
-//        {
-//            _TempArray[i + 1] = OriginalArray[i];
-//        }
-//
-//        delete[] OriginalArray;
-//        OriginalArray = _TempArray;
-//        return true;
-//
-//    }
-//
-//
-//     bool InsertAfter(T Index, T Value)
-//    {
-//
-//        if (Index >= _Size || Index < 0)
-//        {
-//            return false;
-//        }
-//
-//        _Size++;
-//
-//        _TempArray = new T[_Size];
-//
-//
-//        //copy all before index
-//        for (int i = 0; i <= Index; i++)
-//        {
-//            _TempArray[i] = OriginalArray[i];
-//        }
-//
-//        _TempArray[Index + 1] = Value;
-//
-//        //copy all after index
-//        for (int i = Index+1 ; i < _Size; i++)
-//        {
-//            _TempArray[i + 1] = OriginalArray[i];
-//        }
-//
-//        delete[] OriginalArray;
-//        OriginalArray = _TempArray;
-//        return true;
-//
-//    }
-//
-//
-//
-//     bool InsertAtTheEnd(T Value)
-//     {
-//
-//
-//         _Size++;
-//
-//         _TempArray = new T[_Size];
-//
-//
-//
-//
-//         
-//         //copy all after index
-//         for (int i = 0; i < _Size; i++)
+     for (int i = 0; i < _Size; i++)
 //         {
-//             _TempArray[i] = OriginalArray[i];
-//         }
-//         _TempArray[_Size+1] = Value;
-//
-//         delete[] OriginalArray;
-//         OriginalArray = _TempArray;
-//         return true;
-//
-//     }
+
 };
 
